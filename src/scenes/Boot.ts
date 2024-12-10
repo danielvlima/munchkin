@@ -11,6 +11,7 @@ export class Boot extends Scene {
 
         this.load.image('background', 'assets/bg.gif');
         this.load.image('game-backbround', 'assets/game-bg.jpg');
+        this.load.image('door-card', 'assets/door-card.png');
     }
 
     create() {
