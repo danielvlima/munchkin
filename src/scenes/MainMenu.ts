@@ -26,9 +26,7 @@ export class MainMenu extends Scene {
                 y: 10
             },
             resolution: 2,
-            fontFamily: 
-
-
+            fontFamily: 'Arial'
         }).setOrigin(0.5).setInteractive();
 
         this.startButton.on('pointerdown', () => {
