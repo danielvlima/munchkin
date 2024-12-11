@@ -9,7 +9,7 @@ export class MainMenu extends Scene {
     }
 
     create() {
-        this.background = this.add.image(512, 384, 'background').setScale(0.8);
+        this.background = this.add.image(512, 384, 'menu-background').setScale(0.8);
 
         this.logo = this.add.image(512, 300, 'logo').setScale(0.8);
         //quero um branco menos claro
