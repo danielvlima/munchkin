@@ -7,17 +7,38 @@ export default class Card {
   private type: CardType;
   private positionX: number;
   private positionY: number;
-  private cardObject: Phaser.GameObjects.Image;
-  constructor() {
-
+  private currentZone: 'hand' | 'battlefield' | 'discard' | 'pile';
+  constructor(title: string, text: string, imagePath: string, type: CardType) {
+    this.title = title;
+    this.text = text;
+    this.type = type;
+    this.image = imagePath;
+    this.currentZone = 'pile';
+    //setImage(image);
   }
 
-  setCardObject(cardObject: Phaser.GameObjects.Image) {
-    this.cardObject = cardObject;
+  getTitle() {
+    return this.title;
   }
 
-  getCardObject() {
-    return this.cardObject;
+  getText() {
+    return this.text;
+  }
+
+  getImage() {
+    return this.image;
+  }
+
+  getType() {
+    return this.type;
+  }
+
+  setCurrentZone(zone: 'hand' | 'battlefield' | 'discard' | 'pile') {
+    this.currentZone = zone;
+  }
+
+  getCurrentZone() {
+    return this.currentZone;
   }
 
   setPositionX(positionX: number) {
